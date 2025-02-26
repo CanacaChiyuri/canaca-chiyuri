@@ -100,20 +100,56 @@
 
         </div>
 
+        <!-- モーダル -->
+        <div class="modal fade" id="lightboxModalFullscreen" tabindex="-1"
+            aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+
+                        <div id="modalGaImgV">
+                            <div class="d-none d-sm-block">
+                                <img src="./pic/Ga001.jpg" class="img-fluid" id="LightboxImageV" data-bs-dismiss="modal"
+                                    aria-label="Close" style="height: 80vh" />
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <img src="./pic/Ga001.jpg" class="img-fluid" id="LightboxImageVS"
+                                    data-bs-dismiss="modal" aria-label="Close" style="height: 70vh" />
+                            </div>
+                        </div>
+                        <div id="modalGaImgH" style="display: none;">
+                            <div class="d-none d-xxl-block d-xl-block">
+                                <img src="./pic/Ga101_HImg.jpg" class="img-fluid" id="LightboxImageHL"
+                                    data-bs-dismiss="modal" aria-label="Close" style="height: 80vh" />
+                            </div>
+                            <div class="d-block d-xl-none">
+                                <img src="./pic/Ga101_HImg.jpg" class="img-fluid w-80" id="LightboxImageHMS"
+                                    data-bs-dismiss="modal" aria-label="Close" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Original Script -->
         <script src="main.js"></script>
         <script src="addClass.js"></script>
 
-
-
-
     </div>
-    <footer>
-        <p>© 2025 Canaca Chiyuri </p>
-    </footer>
-    <div id="modalDiv"></div>
 
 </body>
+
+<footer>
+    <p>© 2025 Canaca Chiyuri </p>
+</footer>
 
 </html>

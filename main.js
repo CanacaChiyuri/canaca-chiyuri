@@ -226,6 +226,7 @@ function OpenModalFunction(imgName) {
     var ModalImgVDisElement = document.getElementById('modalGaImgV');
     var ModalImgHDisElement = document.getElementById('modalGaImgH');
     var ModalImgVElement = document.getElementById('LightboxImageV');
+    var ModalImgVSElement = document.getElementById('LightboxImageVS');
     var ModalImgHLElement = document.getElementById('LightboxImageHL');
     var ModalImgHMSElement = document.getElementById('LightboxImageHMS');
 
@@ -236,6 +237,7 @@ function OpenModalFunction(imgName) {
     } else {
         console.log("OpenModalFunction End 他サイトの画像");
         ModalImgVElement.setAttribute("src", "Alert");
+        ModalImgVSElement.setAttribute("src", "Alert");
         ModalImgHLElement.setAttribute("src", "Alert");
         ModalImgHMSElement.setAttribute("src", "Alert");
         return;
@@ -244,6 +246,7 @@ function OpenModalFunction(imgName) {
     if (imgName.length > 80) {
         console.log("OpenModalFunction End Length Over");
         ModalImgVElement.setAttribute("src", "Alert");
+        ModalImgVSElement.setAttribute("src", "Alert");
         ModalImgHLElement.setAttribute("src", "Alert");
         ModalImgHMSElement.setAttribute("src", "Alert");
         return;
@@ -261,9 +264,9 @@ function OpenModalFunction(imgName) {
     }
 
     ModalImgVElement.setAttribute("src", imgName);
+    ModalImgVSElement.setAttribute("src", imgName);
     ModalImgHLElement.setAttribute("src", imgName);
     ModalImgHMSElement.setAttribute("src", imgName);
-
     console.log("OpenModalFunction End");
 }
 
