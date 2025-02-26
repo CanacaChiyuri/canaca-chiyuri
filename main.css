@@ -1,0 +1,83 @@
+.outlineBox {
+  background-color: #a6f0ca;
+}
+
+/* top Comment */
+.topCm {
+  margin: 30px;
+  padding: 50px;
+  background-color: #e1f4eb;
+}
+
+/* top Button Space */
+.topBtnSP {
+  padding: 40px;
+}
+
+/* top Button */
+.topBtn {
+  background-color: #57d091;
+  margin: 10px 10px 20px 20px;
+  /* ↑↓←→ */
+}
+
+/* top Button explanation*/
+.topBtnEx {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+/* top Button explanation*/
+.topBtnEx {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+/* gallery IMG Vertical*/
+.gaImgV {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* gallery IMG Horizontal*/
+.gaImgH {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* small Title Space */
+.sTitSP {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* small Sentence Space */
+.sSenSP {
+  margin-left: 20px;
+
+}
+
+@font-face {
+  /* ① ここにfont-familyで指定したい名前を書く*/
+  font-family: "myfont";
+
+  /* フォントが置かれているパスを書く */
+  src: url("GenEiKoburiMin6-R.ttf") format("truetype")
+}
+
+/*
+html {
+  overflow-y: scroll;
+ }
+*/
+
+/* ①で作成した名前を使うと、普通にfont-familyを使う感じで、アップロードしたフォントを利用できる */
+body {
+  font-family: "myfont";
+  font-weight: bold;
+}
+
+.modal-content {
+  background-color: unset;
+}
