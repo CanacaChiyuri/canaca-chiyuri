@@ -257,10 +257,22 @@ function OpenModalFunction(imgName) {
         console.log("OpenModalFunction 横イラスト");
         ModalImgHDisElement.removeAttribute("style");
         ModalImgVDisElement.setAttribute("style", "display:none;");
-    } else {
+    } else if (imgName.indexOf('_VSImg') != -1) {
+        console.log("OpenModalFunction 縦イラスト short");
+        ModalImgVDisElement.removeAttribute("style");
+        ModalImgHDisElement.setAttribute("style", "display:none;");
+        ModalImgVSElement.setAttribute('style', 'style="height: 60vh"');
+
+        //ModalImgVSElement.removeAttribute("style");
+        //ModalImgVSElement.classList.add("w-80");
+
+    }
+    else {
         console.log("OpenModalFunction 縦イラスト");
         ModalImgVDisElement.removeAttribute("style");
         ModalImgHDisElement.setAttribute("style", "display:none;");
+        ModalImgVSElement.setAttribute('style', 'style="height: 70vh"');
+        //ModalImgVSElement.classList.remove("w-80");
     }
 
     ModalImgVElement.setAttribute("src", imgName);
