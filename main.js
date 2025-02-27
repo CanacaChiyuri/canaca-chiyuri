@@ -223,7 +223,8 @@ function OpenModalFunction(imgName) {
     console.log("OpenModalFunction Start");
     console.log(imgName);
 
-    var ModalImgElement = document.getElementById('LightboxImage');
+    var ModalImgPElement = document.getElementById('LightboxImageP');
+    var ModalImgSElement = document.getElementById('LightboxImageS');
 
     // エラーチェック
     // チユリのHP、Local環境以外の画像の場合
@@ -231,17 +232,20 @@ function OpenModalFunction(imgName) {
         console.log("OpenModalFunction End 自サイトの画像");
     } else {
         console.log("OpenModalFunction End 他サイトの画像");
-        ModalImgElement.setAttribute("src", "Alert");
+        ModalImgPElement.setAttribute("src", "Alert");
+        ModalImgSElement.setAttribute("src", "Alert");
         return;
     }
 
     if (imgName.length > 80) {
         console.log("OpenModalFunction End Length Over");
-        ModalImgElement.setAttribute("src", "Alert");
+        ModalImgPElement.setAttribute("src", "Alert");
+        ModalImgSElement.setAttribute("src", "Alert");
         return;
     }
 
-    ModalImgElement.setAttribute("src", imgName);
+    ModalImgPElement.setAttribute("src", imgName);
+    ModalImgSElement.setAttribute("src", imgName);
     console.log("OpenModalFunction End");
 }
 
