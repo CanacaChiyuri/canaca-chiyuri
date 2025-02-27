@@ -223,12 +223,7 @@ function OpenModalFunction(imgName) {
     console.log("OpenModalFunction Start");
     console.log(imgName);
 
-    var ModalImgVDisElement = document.getElementById('modalGaImgV');
-    var ModalImgHDisElement = document.getElementById('modalGaImgH');
-    var ModalImgVElement = document.getElementById('LightboxImageV');
-    var ModalImgVSElement = document.getElementById('LightboxImageVS');
-    var ModalImgHLElement = document.getElementById('LightboxImageHL');
-    var ModalImgHMSElement = document.getElementById('LightboxImageHMS');
+    var ModalImgElement = document.getElementById('LightboxImage');
 
     // エラーチェック
     // チユリのHP、Local環境以外の画像の場合
@@ -236,50 +231,17 @@ function OpenModalFunction(imgName) {
         console.log("OpenModalFunction End 自サイトの画像");
     } else {
         console.log("OpenModalFunction End 他サイトの画像");
-        ModalImgVElement.setAttribute("src", "Alert");
-        ModalImgVSElement.setAttribute("src", "Alert");
-        ModalImgHLElement.setAttribute("src", "Alert");
-        ModalImgHMSElement.setAttribute("src", "Alert");
+        ModalImgElement.setAttribute("src", "Alert");
         return;
     }
 
     if (imgName.length > 80) {
         console.log("OpenModalFunction End Length Over");
-        ModalImgVElement.setAttribute("src", "Alert");
-        ModalImgVSElement.setAttribute("src", "Alert");
-        ModalImgHLElement.setAttribute("src", "Alert");
-        ModalImgHMSElement.setAttribute("src", "Alert");
+        ModalImgElement.setAttribute("src", "Alert");
         return;
     }
 
-    // 横イラストの場合
-    if (imgName.indexOf('_HImg') != -1) {
-        console.log("OpenModalFunction 横イラスト");
-        ModalImgHDisElement.removeAttribute("style");
-        ModalImgVDisElement.setAttribute("style", "display:none;");
-
-    } else if (imgName.indexOf('_VSImg') != -1) {
-        console.log("OpenModalFunction 縦イラスト short");
-        ModalImgVDisElement.removeAttribute("style");
-        ModalImgHDisElement.setAttribute("style", "display:none;");
-        //ModalImgVSElement.setAttribute('style', 'style="height: 60vh"');
-
-        //ModalImgVSElement.removeAttribute("style");
-        //ModalImgVSElement.classList.add("w-80");
-
-    }
-    else {
-        console.log("OpenModalFunction 縦イラスト");
-        ModalImgVDisElement.removeAttribute("style");
-        ModalImgHDisElement.setAttribute("style", "display:none;");
-        //ModalImgVSElement.setAttribute('style', 'style="height: 70vh"');
-        //ModalImgVSElement.classList.remove("w-80");
-    }
-
-    ModalImgVElement.setAttribute("src", imgName);
-    ModalImgVSElement.setAttribute("src", imgName);
-    ModalImgHLElement.setAttribute("src", imgName);
-    ModalImgHMSElement.setAttribute("src", imgName);
+    ModalImgElement.setAttribute("src", imgName);
     console.log("OpenModalFunction End");
 }
 
